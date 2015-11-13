@@ -10,7 +10,7 @@ require 'faker'
     name:      Faker::Book.title,
     category:  [:ski, :snowboard, :autre].sample(1).first,
     city:      Faker::Address.city,
-    price:     rand(1..90),
+    price_per_hour:     rand(1..90),
     guide_id:  [1, 2, 3].sample(1).first,
   })
 
