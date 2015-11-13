@@ -11,9 +11,9 @@ $line-height-base:        $base-height;
 $headings-font-family:    $header-font;
 
 // Semantic color scheme
-$brand-primary:   $green;
-$brand-success:   $blue;
-$brand-info:      $gray;
+$brand-primary:   $blue;
+$brand-success:   $green;
+$brand-info:      $yellow;
 $brand-danger:    $red;
 $brand-warning:   $orange;
 
@@ -21,5 +21,3 @@ $brand-warning:   $orange;
 $border-radius-base:  2px;
 $border-radius-large: 2px;
 $border-radius-small: 2px;
-
-$grid-float-breakpoint: 1000px;
