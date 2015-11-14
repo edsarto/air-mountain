@@ -30,6 +30,9 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'simple_form'
 gem "autoprefixer-rails"
 
+# Use figaro to manage environment variables
+gem 'figaro'
+
 # For user authentication
 gem 'devise'
 gem 'omniauth-facebook'
