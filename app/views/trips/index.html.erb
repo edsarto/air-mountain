@@ -1,3 +1,12 @@
 <div>
   <h1>Trips index</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 padding-top"></div>
+      <% @trips.each do |trip| %>
+        <%= render 'trip_card', trip: trip %>
+      <% end %>
+    </div>
+  </div>
 </div>

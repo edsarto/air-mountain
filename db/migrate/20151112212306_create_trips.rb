@@ -12,5 +12,6 @@ class CreateTrips < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_foreign_key :trips, :users, column: :guide_id
   end
 end
