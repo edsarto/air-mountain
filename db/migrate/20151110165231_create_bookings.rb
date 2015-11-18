@@ -12,9 +12,10 @@ class CreateBookings < ActiveRecord::Migration
       t.boolean :client_archive
       t.boolean :guide_archive
       t.integer :total_price
-      t.references :user, index: true, foreign_key: true
+      t.references :trip, index: true, foreign_key: true
 
       t.timestamps null: false
     end
+    add_foreign_key :bookings, :users, column: :client_id
   end
 end
