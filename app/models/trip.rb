@@ -2,7 +2,7 @@ class Trip < ActiveRecord::Base
 
   belongs_to :guide, class_name: "User", foreign_key: "guide_id"
 
-  has_many :bookings, dependent: :destroy
+  has_many :bookings
 
   validates_presence_of :guide, :name, :city, :price_per_hour, :picture
 
