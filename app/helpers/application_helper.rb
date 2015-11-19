@@ -15,7 +15,7 @@ module ApplicationHelper
   end
 
   def user_pict(user)
-    if user.picture.exists?
+    if user.picture?
       user.picture
     else
       "placeholder.png"

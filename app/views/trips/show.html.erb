@@ -16,10 +16,10 @@
       <p><strong>Catégorie :</strong></p>
     </div>
     <div class="col-xs-12 col-md-3 text-left">
-      <p><%= @territory.category_text %></p>
+      <p><%= @trip.category_text %></p>
     </div>
     <div class="col-xs-12 col-md-3 text-left">
-      <p><%= number_with_precision(@territory.price, precision: 0) %> € / nuit</p>
+      <p><%= number_with_precision(@trip.price, precision: 0) %> € / nuit</p>
     </div>
   </div>
   <hr>
@@ -28,76 +28,16 @@
       <p><strong>Description :</strong></p>
     </div>
     <div class="col-xs-12 col-md-6 text-left">
-      <p><%= @territory.description %></p>
+      <p><%= @trip.description %></p>
     </div>
   </div>
   <hr>
   <div class="row">
     <div class="col-xs-12 col-md-3 col-md-offset-2 text-left">
-      <p><strong>Adresse :</strong></p>
+      <p><strong>Ville :</strong></p>
     </div>
     <div class="col-xs-12 col-md-6 text-left">
-      <p><%= @territory.full_address %></p>
+      <p><%= @trip.city %></p>
     </div>
   </div>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12 col-md-3 col-md-offset-2 text-left">
-      <p><strong>Politique :</strong></p>
-    </div>
-    <div class="col-xs-12 col-md-6 text-left">
-      <p><%= @territory.policy %></p>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12 col-md-3 col-md-offset-2 text-left">
-      <p><strong>Rencontrez le propriétaire :</strong></p>
-    </div>
-    <div class="col-xs-12 col-md-3 text-left">
-      <%= link_to profile_path(@territory.owner) do %>
-        <p><%= @territory.owner.first_name %> <%= @territory.owner.last_name %></p>
-      <% end %>
-    </div>
-    <div class="col-xs-12 col-md-3 text-left">
-      <%= link_to profile_path(@territory.owner) do %>
-        <%= image_tag user_pict(@territory.owner), class: "avatar avatar-large avatar-bordered" %>
-      <% end %>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-xs-6 col-xs-offset-3 text-center">
-      <% if policy(@territory).update? %>
-        <%= link_to new_account_territory_photo_path(@territory), {class: "btn btn-info"} do %>
-          <h5>Ajouter une photo  <i class="fa fa-camera"></i> </h5>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 text-left">
-      <div class="row">
-        <% @territory.photos.each do |photo| %>
-          <%= render 'photo', photo: photo %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12 col-md-5 col-md-offset-2 text-left">
-      <% if @territory.reviews.exists? %>
-        <p><strong>Evaluation :</strong></p>
-      <% else %>
-        <p><strong><%= @territory.name %> n'a pas encore reçu de commentaire</strong></p>
-      <% end %>
-    </div>
-  </div>
-  <div class="row">
-    <% @territory.bookings.each do |booking| %>
-      <% booking.reviews.each do |review| %>
-        <%= render "review", review: review %>
-      <% end %>
-    <% end %>
-  </div>
+</div>
