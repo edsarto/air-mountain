@@ -1,4 +1,4 @@
-<div class="banner show-img-cover text-center" style="background-image:url(<%= @territory.picture.url(:large) %>)">
+<div class="banner show-img-cover text-center" style="background-image:url(<%= @trip.picture.url(:large) %>)">
   <div class="gradient"></div>
   <div class="banner-content">
     <h1 id="trip-name"><%= @trip.name %></h1>
@@ -16,10 +16,10 @@
       <p><strong>Catégorie :</strong></p>
     </div>
     <div class="col-xs-12 col-md-3 text-left">
-      <p><%= @trip.category_text %></p>
+      <p><%= @trip.category %></p>
     </div>
     <div class="col-xs-12 col-md-3 text-left">
-      <p><%= number_with_precision(@trip.price, precision: 0) %> € / nuit</p>
+      <p><%= number_with_precision(@trip.price_per_hour, precision: 0) %> € / nuit</p>
     </div>
   </div>
   <hr>

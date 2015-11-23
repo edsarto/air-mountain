@@ -5,7 +5,7 @@
         <%= link_to trip_path(trip) do %>
           <div class="card-bg" style="background-image:url(<%= trip.picture.url (:medium) %>)">
           </div>
-          <div class="card-price"><h5><%= number_with_precision(trip.price_per_hour, precision: 0) %>€ / nuit</h5></div>
+          <div class="card-price"><h5><%= number_with_precision(trip.price_per_hour, precision: 0) %>€ / heure</h5></div>
         <% end %>
       </div>
     </div>
